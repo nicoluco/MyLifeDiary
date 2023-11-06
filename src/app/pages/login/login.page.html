@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="centro">
+    <h1>
+      My Life Diary
+    </h1>
+    <img src="assets/icon/education_6041529.png" alt="" class="icono">
+    <h5> Bienvenido!</h5>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Iniciar sesión</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full">
+        <!-- usamos ngModel para indicarle al input el objeto a utilizar -->
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="login.Usuario"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="login.Password"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <!-- Indicamos mediante el (click) la funcion a quien referencia -->
+          <ion-button expand="full" (click)="ingresar()" class="colorBtn">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">agregar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h2 class="ion-text-center"> Nuevo Acontecimiento </h2>
+  <p> {{hoy | date}} </p>
+  <ion-item >
+    <ion-label position="floating">Titulo </ion-label>
+    <ion-input type="text" [(ngModel)]="capitulo.titulo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Texto</ion-label>
+    <ion-input type="text"[(ngModel)]="capitulo.texto" ></ion-input>
+  </ion-item>
+
+  <ion-button shape="block" (click)="enviarDatos()">Guardar Cambio {{capitulo.titulo}} </ion-button>
+
+</ion-content>
