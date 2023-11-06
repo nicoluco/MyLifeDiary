@@ -9,62 +9,45 @@
 <ion-content [fullscreen]="true" class="ion-padding-horizontal">
   <ion-title class="ion-padding-top ion-text-center">
     <ion-label>
-      <h1>Bienvenido</h1>
+      <h1>Bienvenido <span *ngIf="usuario">{{usuario}}</span></h1>
       <!-- {{interpolacion}} 
           Permite mostrar los datos desde el script a la visual
           verificar el data en el home.page.ts
         -->
-      <p *ngIf="usuario">Usuario: {{usuario}}</p>
+      
     </ion-label>
   </ion-title>
+  <div class="centrar">
+    <img class="img" src="../../assets/img/file_notes.png" alt="">
+  </div>
 
   <h2 class="ion-text-center">Capitulos vivido</h2>
 
   <br>
 
-  <ion-list>
-    <h2>Titulos</h2>
-    <ion-item-sliding *ngFor="let x of titulosRecibidos">
-      <ion-item>
-        <ion-label>
-            <p >
-              <ion-label> {{ x }} </ion-label>
-            </p>
-        </ion-label>
+  <ion-card class="fondo">
+  <ion-card-header>
+    <ion-card-title>Títulos</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let x of titulosRecibidos" class="fondo">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="../../assets/img/estrella.png" />
+        </ion-thumbnail>
+        <ion-label > {{x}} </ion-label>
       </ion-item>
-      
+   
+    </ion-list>
+  </ion-card-content>
+</ion-card>
 
-      <ion-item-options>
-        <ion-item-option>
-          <ion-icon slot="bottom" name="pencil-sharp"></ion-icon>
-          Modificar
-        </ion-item-option>
-        <ion-item-option color="danger">
-          <ion-icon slot="bottom" name="trash"></ion-icon>
-          Eliminar
-        </ion-item-option>
-      </ion-item-options>
-
-    </ion-item-sliding>
-  </ion-list>
-
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-
-
-      
        <div class="example-button-container">
         <button [routerLink]="['/agregar']" (click)="alerta()" mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
           <mat-icon >plus_one</mat-icon>
         </button>
         <button [routerLink]="['/calendario']" (click)="alerta()" mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
           <mat-icon ><span class="material-symbols-outlined">calendar_month</span></mat-icon>
-          <!-- <mat-datepicker #picker></mat-datepicker> -->
-          
         </button>
       </div>
 </ion-content>

@@ -29,4 +29,43 @@
 .example-button-row .mat-mdc-button-base {
   margin: 8px 8px 8px 0;
 }
+ion-content {
+  --background: url('../../assets/img/fondo2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.fondo{
+  background-color: rgba(255, 255, 255, 0.193);
+}
 
+.example-button-container {
+  position: absolute;
+  bottom: 16px;  // Ajusta la distancia desde la parte inferior según sea necesario
+  width: 100%;
+  display: flex;
+  justify-content: space-around; // Para espaciar los botones horizontalmente
+}
+
+.example-button-container button {
+  margin-bottom: 50px;  
+  background-color: rgba(255, 255, 255, 0.507);
+  width: 70px;
+  height: 70px;
+}
+.img{
+    height: 100px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2px;
+}
+
+h1{
+  color: rgb(7, 17, 90);
+  font-size: 30px;
+}

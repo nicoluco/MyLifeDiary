@@ -27,7 +27,10 @@ export class HomePage {
         }
         if (this.data2.capitulo) {
           this.tituloRecibido = this.data2.capitulo.titulo;
-          this.titulosRecibidos.unshift(this.tituloRecibido);
+          if (!this.titulosRecibidos.includes(this.tituloRecibido)) {
+            this.titulosRecibidos.unshift(this.tituloRecibido);
+            
+          }
           console.log(this.titulosRecibidos);
         }
 

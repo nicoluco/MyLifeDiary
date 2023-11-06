@@ -10,6 +10,7 @@ import { CalendarioPage } from './calendario.page';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     CalendarioPageRoutingModule,
     MatDatepickerModule,
     MatCardModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    SharedModule
   ],
   declarations: [CalendarioPage]
 })

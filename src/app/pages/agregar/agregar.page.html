@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Agregar dia</ion-title>
+    <ion-title>My Life Diary</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,17 +12,26 @@
   </ion-header>
 
   <h2 class="ion-text-center"> Nuevo Acontecimiento </h2>
+  <div class="centrar">
+    <img src="../../../assets/img/typewriter.png" alt="" class="img">
+  </div>
   <p> {{hoy | date}} </p>
-  <ion-item >
-    <ion-label position="floating">Titulo </ion-label>
-    <ion-input type="text" [(ngModel)]="capitulo.titulo"></ion-input>
-  </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Texto</ion-label>
-    <ion-input type="text"[(ngModel)]="capitulo.texto" ></ion-input>
-  </ion-item>
+  <div class="centrar">
+    <ion-item >
+      <ion-label position="floating">Titulo </ion-label>
+      <ion-input type="text" [(ngModel)]="capitulo.titulo"></ion-input>
+    </ion-item>
 
-  <ion-button shape="block" (click)="enviarDatos()">Guardar Cambio {{capitulo.titulo}} </ion-button>
+    <ion-item>
+      <ion-label position="floating">¿Cómo estuvo tu día?</ion-label>
+      <ion-textarea type="text"[(ngModel)]="capitulo.texto" ></ion-textarea>
+    </ion-item>
+
+    <br>
+    <ion-button color="secondary" shape="block" (click)="enviarDatos()">Guardar Cambio {{capitulo.titulo}} </ion-button>
+  </div>
+ 
+
 
 </ion-content>

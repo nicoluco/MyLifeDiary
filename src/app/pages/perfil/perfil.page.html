@@ -14,7 +14,6 @@
           Permite mostrar los datos desde el script a la visual
           verificar el data en el home.page.ts
         -->
-      <p *ngIf="usuario"> Usuario: {{usuario}} </p>
     </ion-label>
   </ion-title>
   <b class="ion-text-center">
@@ -41,12 +40,12 @@
   <ion-grid>
     <ion-row>
       <ion-col col-6>
-        <ion-button shape="block" (click)="limpiar()" >
+        <ion-button color="secondary" shape="block" (click)="limpiar()" >
           Limpiar
         </ion-button>
       </ion-col>
       <ion-col col-6>
-        <ion-button shape="block" (click)="mostrar()"[routerLink]="['/agregar']">
+        <ion-button color="secondary" shape="block" (click)="mostrar()"[routerLink]="['/home']">
           Listo
         </ion-button>
       </ion-col>

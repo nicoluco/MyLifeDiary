@@ -1,0 +1,33 @@
+ion-content {
+  --background: url('../../../assets/img/fondo2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2px;
+
+}
+
+p{
+    margin-left: 20px;
+}
+
+ion-item{
+    width: 90%;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.img{
+    height: 200px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h2{
+    color: rgba(19, 18, 18, 0.809);
+}

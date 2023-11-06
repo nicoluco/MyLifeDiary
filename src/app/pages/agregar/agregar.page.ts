@@ -4,7 +4,6 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 @Component({
   selector: 'app-agregar',
   templateUrl: './agregar.page.html',
-  template: `<p> {{hoy}} <p>`,
   styleUrls: ['./agregar.page.scss'],
 })
 export class AgregarPage implements OnInit {

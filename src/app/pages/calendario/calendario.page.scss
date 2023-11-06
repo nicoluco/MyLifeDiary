@@ -4,7 +4,7 @@
 */
 
 ion-datetime::part(calendar-day) {
-  color: #da5296;
+  color: #ba4b83;
 }
 
 ion-datetime::part(calendar-day today) {
@@ -12,8 +12,8 @@ ion-datetime::part(calendar-day today) {
 }
 
 ion-datetime::part(calendar-day):focus {
-  background-color: rgb(154 209 98 / 0.2);
-  box-shadow: 0px 0px 0px 4px rgb(154 209 98 / 0.2);
+  background-color: rgba(102, 98, 209, 0.2);
+  box-shadow: 0px 0px 0px 4px rgba(111, 98, 209, 0.2);
 }
 
 /*
@@ -23,8 +23,8 @@ ion-datetime::part(calendar-day):focus {
 
 ion-datetime.md::part(calendar-day active),
 ion-datetime.md::part(calendar-day active):focus {
-  background-color: #9ad162;
-  border-color: #9ad162;
+  background-color:#6273d1;
+  border-color: #6273d1;
   color: #fff;
 }
 
@@ -39,8 +39,8 @@ ion-datetime.md::part(calendar-day today) {
 
 ion-datetime.ios::part(calendar-day active),
 ion-datetime.ios::part(calendar-day active):focus {
-  background-color: rgb(154 209 98 / 0.2);
-  color: #9ad162;
+  background-color: rgba(98, 115, 209, 0.2);
+  color: #6273d1;
 }
 
 .centrar{
@@ -48,4 +48,14 @@ ion-datetime.ios::part(calendar-day active):focus {
   justify-content: center; 
   align-items: center;
   margin-top: 20px;
+  flex-direction: column;
+}
+
+ion-content {
+  --background: linear-gradient(rgba(9, 9, 9, 0.347), rgba(255, 253, 253, 0.324)), url('../../../assets/img/fondo2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+h1{
+  color: rgba(250, 250, 250, 0.881);
+  margin-bottom: 20px;
 }
