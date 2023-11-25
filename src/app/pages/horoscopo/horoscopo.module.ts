@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EstadisticasPageRoutingModule } from './estadisticas-routing.module';
+import { HoroscopoPageRoutingModule } from './horoscopo-routing.module';
 
-import { EstadisticasPage } from './estadisticas.page';
+import { HoroscopoPage } from './horoscopo.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EstadisticasPageRoutingModule
+    HoroscopoPageRoutingModule
   ],
-  declarations: [EstadisticasPage]
+  declarations: [HoroscopoPage]
 })
-export class EstadisticasPageModule {}
+export class HoroscopoPageModule {}

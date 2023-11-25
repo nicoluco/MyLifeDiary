@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { AnimationController, MenuController, ToastController} from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +8,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
+  
   /*Se genera el modelo user con dos claves
   cada clave tiene su valor inicial*/
   login: any = {
@@ -16,9 +18,10 @@ export class LoginPage implements OnInit {
   }
   field: string = "";
 
-  constructor(private router: Router, public toastController: ToastController) { } //se debe instanciar
+  constructor(private router: Router, public toastController: ToastController, private animationCtrl: AnimationController, private menuCtrl: MenuController) { } //se debe instanciar
 
   ngOnInit() {
+    this.menuCtrl.enable(false)
   }
   ingresar() {
     if (this.validateModel(this.login)) {
@@ -37,6 +40,7 @@ export class LoginPage implements OnInit {
           user: this.login // Al estado le asignamos un objeto con clave y valor
         }
       };
+      localStorage.setItem('token', this.login.Usuario); // primero como quiero llamar a esa variable, y el segundo el valor de esa variable
       this.router.navigate(['/home'], navigationExtras);//navegamos hacia el home y enviamos información adicional
 
     }

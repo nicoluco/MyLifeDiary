@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { AlertController, ToastController } from '@ionic/angular';
+import { ServicioDbService } from 'src/app/services/servicio-db.service';
 
 @Component({
   selector: 'app-agregar',
@@ -21,7 +23,7 @@ export class AgregarPage implements OnInit {
   textoRecibido: string = "";
 
 
-  constructor(private router: Router, private activerouter: ActivatedRoute) {
+  constructor(private router: Router, private activerouter: ActivatedRoute, private db: ServicioDbService, private alertController: AlertController, private toastController: ToastController) {
     this.activerouter.queryParams.subscribe(params => { //utilizamos lambd
       if (this.router.getCurrentNavigation()?.extras.state) {
         this.data2 = this.router.getCurrentNavigation()?.extras.state;
@@ -35,13 +37,29 @@ export class AgregarPage implements OnInit {
     }
 
   enviarDatos() { //crear una variable de tipo contexto que seria de tipo let y llamarla de cualquier modo, en este caso del mismo nombre de la libreria que va a utilizar
-      let navigationExtras: NavigationExtras = {
-        state: { //guardar en una estrutura los datos que vamos a pasar
-          capitulo: this.capitulo
-        }
-      }
-    this.router.navigate(['/home'], navigationExtras)
-    }
+    this.db.insertarDia(this.capitulo.titulo, this.capitulo.texto);
+    this.db.presentToast("Día Agregada");
+ 
+ 
+ 
+    //   let navigationExtras: NavigationExtras = {
+    //     state: { //guardar en una estrutura los datos que vamos a pasar
+    //       capitulo: this.capitulo
+    //     }
+    //   }
+    this.router.navigate(['/home'])
+  }
+  
+
+  async presentToast(position: 'top' | 'middle' | 'bottom', msj: string) {
+    const toast = await this.toastController.create({
+      message: msj, //antes salia: 'Hello World!'
+      duration: 1500,
+      position: position,
+    });
+
+    await toast.present();
+  }
 
 
 }

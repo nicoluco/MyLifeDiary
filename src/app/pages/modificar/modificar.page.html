@@ -1,0 +1,40 @@
+<ion-header >
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      My Life Diary
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Modificar Día</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h2 class="ion-text-center">Día a Modificar</h2>
+   <div class="centrar">
+    <img src="../../../assets/img/typewriter.png" alt="" class="img">
+  </div>
+
+
+  <div class="centrar">
+    <ion-item >
+      <ion-label position="floating">Titulo </ion-label>
+      <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+    </ion-item>
+
+
+  <ion-item>
+    <ion-label position="floating">Modificar texto </ion-label>
+     <ion-textarea type="text"[(ngModel)]="texto" ></ion-textarea>
+  </ion-item>
+
+  <br>
+  <ion-button shape="block" (click)="enviarDatos()" >Guardar Cambio</ion-button>
+  </div>
+
+</ion-content>
