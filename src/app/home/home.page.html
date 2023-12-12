@@ -11,10 +11,7 @@
     <ion-label>
       <h1>Bienvenido <span *ngIf="usuario">{{usuario}}</span></h1>
       <small>Temperatura Actual: {{tiempo}}°C- {{descriptionClima}}</small>
-      <!-- {{interpolacion}} 
-          Permite mostrar los datos desde el script a la visual
-          verificar el data en el home.page.ts
-        -->
+
       
     </ion-label>
   </ion-title>
@@ -54,30 +51,10 @@
 
     </ion-item-sliding>
 
-
-
-      <!-- <ion-item *ngFor="let x of arregloDiario" class="fondo">
-        <ion-thumbnail slot="start">
-          <img alt="Silhouette of mountains" src="../../assets/img/estrella.png" />
-        </ion-thumbnail>
-        <ion-label > 
-          <h2>{{ x.titulo }}</h2>
-          <p style="word-wrap: break-word; white-space: normal;">{{ x.texto }} </p>
-        </ion-label>
-      </ion-item>
-    -->
     </ion-list>
   </ion-card-content>
 </ion-card>
 
-       <!-- <div class="example-button-container">
-        <button [routerLink]="['/agregar']" mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
-          <mat-icon >plus_one</mat-icon>
-        </button>
-        <button [routerLink]="['/calendario']" mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
-          <mat-icon ><span class="material-symbols-outlined">calendar_month</span></mat-icon>
-        </button>
-      </div> -->
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button [routerLink]="['/agregar']" >

@@ -16,8 +16,8 @@ export class ServicioDbService {
   tablaDiario: string = "CREATE TABLE IF NOT EXISTS diario(id_diario INTEGER PRIMARY KEY autoincrement, titulo VARCHAR (40), texto TEXT,id_usuario INTEGER, FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario));";
   //variables para la sentencia de registros por defecto en la tabla
   registroDia: string = "INSERT or IGNORE INTO diario(id_diario,titulo,texto) VALUES (1,'Primer registro','texto de prueba');";
-  //observable para manipular todos los registros de la tabla noticia (crea un observable para cada tabla)
-  //son elementos que van a transmitir info desde aqui (el servicio) a nustras pags de manera sincronica.(para q el usuario vea la info en tiempo real)
+  //observable para manipular todos los registros de la tabla diario (crea un observable para cada tabla)
+  //son elementos que van a transmitir info desde aquí (el servicio) a nustras pags de manera sincronica.(para q el usuario vea la info en tiempo real)
   listaDiario = new BehaviorSubject([]);
   //observable para manipular si la BD esta lista o no para su manipulación
   private isDBReady: BehaviorSubject<boolean> = new BehaviorSubject(false);

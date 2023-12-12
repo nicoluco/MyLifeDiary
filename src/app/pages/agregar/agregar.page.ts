@@ -41,12 +41,6 @@ export class AgregarPage implements OnInit {
     this.db.presentToast("Día Agregada");
  
  
- 
-    //   let navigationExtras: NavigationExtras = {
-    //     state: { //guardar en una estrutura los datos que vamos a pasar
-    //       capitulo: this.capitulo
-    //     }
-    //   }
     this.router.navigate(['/home'])
   }
   
